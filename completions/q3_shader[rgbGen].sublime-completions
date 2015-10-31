@@ -1,0 +1,20 @@
+{
+    "scope": "source.q3shader.rgbGen",
+
+    "completions":
+    [
+        { "trigger": "wave\t<func>", "contents": "wave ${1:${2:square} ${3:0} ${4:0} ${5:0} ${6:0}} //wave func base amplitude phase freq" },
+        { "trigger": "const\t<R G B>", "contents": "const ( ${1:${2:0.5} ${3:0.5} ${4:0.5}} )" },
+        "identity",
+        "identityLighting",
+        "vertex",
+        "oneMinusVertex",
+        "exactVertex",
+        "fromVertex",
+        "entity",
+        "oneMinusEntity",
+        "lightingDiffuse",
+        "noise",
+    ]
+
+}

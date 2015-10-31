@@ -1,0 +1,14 @@
+{
+    "scope": "source.q3shader.deformVertexes",
+
+    "completions":
+    [
+        { "trigger": "wave\twave type", "contents": "wave ${1:${2:10} ${3:sin} ${4:0} ${5:2} ${6:0} ${7:0.2}} //wave div(wave spread) func base amplitude phase freq" },
+        { "trigger": "normal\tnormal type", "contents": "normal ${1:${2:10} ${3:sin} ${4:0} ${5:0.2} ${6:4.0}} //normal div(wave spread) func base amplitude freq" },
+        { "trigger": "bulge\tbulge type", "contents": "bulge ${1:${2:100} ${3:100} ${4:30}} //bulge bulgeS bulgeT bulgeSpeed" },
+        { "trigger": "move\tmove type", "contents": "move ${1:${2:3} ${3:1} ${4:0} ${5:sin} ${6:0} ${7:5} ${8:0} ${9:0.2}} //move x y z func base amplitude phase freq" },
+        "autosprite",
+        "autosprite2",
+    ]
+
+}

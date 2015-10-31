@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[$TM_SELECTED_TEXT
+{
+    qer_editorimage $TM_SELECTED_TEXT
+    surfaceparm metalsteps
+    
+    {
+        map $TM_SELECTED_TEXT
+        rgbGen identity
+    }
+
+    {
+        map $lightmap
+        blendFunc GL_DST_COLOR GL_ZERO
+        rgbGen identity
+    }
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>sample</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.q3shader</scope>
+</snippet>

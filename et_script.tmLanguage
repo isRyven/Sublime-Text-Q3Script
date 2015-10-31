@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<key>name</key>
+	<string>ET/RTCW Script</string>
+
+	<key>scopeName</key>
+	<string>source.etscript</string>
+
+	<key>uuid</key>
+	<string>22986481CA-15D9-AEDD-000D93C8BE28</string>
+
+	<key>fileTypes</key>
+	<array>
+		<string>script</string>
+		<string>ai</string>
+	</array>
+
+	<key>foldingStartMarker</key>
+	<string>\{\s*$</string>
+
+	<key>foldingStopMarker</key>
+	<string>^\s*\}</string>
+
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>#comment</string>
+		</dict>
+
+		<dict>
+			<key>include</key>
+			<string>#routine-name</string>
+		</dict>
+
+		<dict>
+			<key>include</key>
+			<string>#routine</string>
+		</dict>
+	</array>
+
+	<key>repository</key>
+	<dict>
+		<key>routine</key>
+		<dict>
+			<key>name</key>
+			<string>meta.routine.etscript</string>
+			
+			<key>begin</key>
+			<string>(\{)</string>
+
+			<key>end</key>
+			<string>(\})</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>comment</string>
+				</dict>
+			</dict>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#function-name</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#function</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#comment</string>
+				</dict>
+			</array>
+		</dict>
+
+		<key>routine-name</key>
+		<dict>
+			<key>match</key>
+			<string>^\s*([\w\-]+)\s*((?=\{))*</string>
+
+			<key>name</key>
+			<string>entity.name.class.etscript</string>
+		</dict>
+
+		<key>function</key>
+		<dict>
+			<key>name</key>
+			<string>meta.function.etscript</string>
+			
+			<key>begin</key>
+			<string>(\{)</string>
+
+			<key>end</key>
+			<string>(\})</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>comment</string>
+				</dict>
+			</dict>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#action-name</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#action</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#cmd_accum</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#cmd_trigger</string>
+				</dict>	
+
+				<dict>
+					<key>include</key>
+					<string>#cmd_setstate</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#cmd_wait</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#command</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#basic-types</string>
+				</dict>
+			</array>
+		</dict>
+
+		<key>function-name</key>
+		<dict>
+			<key>match</key>
+			<string>^\s*(\w+)\s*(\w+\s*)*</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.etscript</string>
+				</dict>
+
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>markup.bold support.function</string>
+				</dict>
+			</dict>
+
+			<key>name</key>
+			<string>meta.function.etscript</string>
+		</dict>
+
+		<key>action</key>
+		<dict>
+			<key>name</key>
+			<string>meta.action.etscript</string>
+			
+			<key>begin</key>
+			<string>(\{)</string>
+
+			<key>end</key>
+			<string>(\})</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>comment</string>
+				</dict>
+			</dict>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#command</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#basic-types</string>
+				</dict>
+			</array>
+		</dict>
+
+		<key>action-name</key>
+		<dict>
+			<key>match</key>
+			<string>^\s*(?i)(create|set|delete)(\s+|$)(?!\w)</string>
+
+			<key>name</key>
+			<string>entity.name.function</string>
+		</dict>
+
+		<key>command</key>
+		<dict>
+			<key>match</key>
+			<string>^\s*\w+</string>
+
+			<key>name</key>
+			<string>keyword.control</string>
+		</dict>
+
+		<key>cmd_accum</key>
+		<dict>
+			<key>match</key>
+			<string>^\s*((?:global)*accum)\s+(\d+)\s+(\w+)</string>
+			
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control</string>
+				</dict>
+
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric</string>
+				</dict>
+
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator</string>
+				</dict>
+			</dict>
+		</dict>
+
+		<key>cmd_trigger</key>
+		<dict>
+			<key>begin</key>
+			<string>^\s*(trigger)</string>
+
+			<key>end</key>
+			<string>(\w+)\s*($|(?=//))</string>
+
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control</string>
+				</dict>
+			</dict>
+
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.function</string>
+				</dict>
+			</dict>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>self|global|player|activator</string>
+
+					<key>name</key>
+					<string>variable.language</string>
+				</dict>
+			</array>
+		</dict>
+
+		<key>cmd_setstate</key>
+		<dict>
+			<key>match</key>
+			<string>^\s*(setstate)\s+(\w+)\s+(\w+)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control</string>
+				</dict>
+
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string></string>
+				</dict>
+
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>storage.modifier</string>
+				</dict>
+			</dict>
+		</dict>
+
+		<key>cmd_wait</key>
+		<dict>
+			<key>match</key>
+			<string>^\s*(wait)\s+</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic entity.name.function</string>
+				</dict>
+			</dict>
+		</dict>
+
+		<key>comment</key>
+		<dict>
+			<key>match</key>
+			<string>\/\/\s*.*</string>
+
+			<key>name</key>
+			<string>comment.line.double-slash</string>
+		</dict>
+
+		<key>number</key>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;!\w)(-)*(\d+)*(\.)*(\d+)(?!\w)</string>
+
+			<key>name</key>
+			<string>constant.numeric</string>
+		</dict>
+
+		<key>string</key>
+		<dict>
+			<key>match</key>
+			<string>\"[^"]+\"</string>
+
+			<key>name</key>
+			<string>string.quoted.double</string>
+		</dict>
+
+		<key>path</key>
+		<dict>
+			<key>match</key>
+			<string>[\w\-\.]*((/|\\)[\w\-\.]+)+</string>
+
+			<key>name</key>
+			<string>string.unquoted</string>
+		</dict>
+
+		<key>basic-types</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#comment</string>
+				</dict>				
+
+				<dict>
+					<key>include</key>
+					<string>#number</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#string</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#path</string>
+				</dict>
+			</array>
+		</dict>
+
+	</dict>	
+
+</dict>
+</plist>

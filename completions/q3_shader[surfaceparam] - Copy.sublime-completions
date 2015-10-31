@@ -1,0 +1,43 @@
+{
+    "scope": "source.q3shader.surfaceparm",
+
+    "completions":
+    [
+        "alphashadow",
+        "antiportal",
+        "areaportal",
+        "botclip",
+        "clusterportal",
+        "detail",
+        "donotenter",
+        "dust",
+        "flesh",
+        "fog",
+        "hint",
+        "ladder",
+        "lava",
+        "lightfilter",
+        "lightgrid",
+        "metalsteps",
+        "monsterclip",
+        "nodamage",
+        "nodlight",
+        "nodraw",
+        "noimpact",
+        "nomarks",
+        "nolightmap",
+        "nosteps",
+        "nonsolid",
+        "origin",
+        "playerclip",
+        "pointlight",
+        "skip",
+        "sky",
+        "slick",
+        "slime",
+        "structural",
+        "trans",
+        "water"
+    ]
+
+}

@@ -1,0 +1,12 @@
+{
+    "scope": "source.q3shader.tcGen",
+
+    "completions":
+    [
+        { "trigger": "vector\t<coords>", "contents": "vector ( ${1:${2:0.01} ${3:0} ${4:0}} ) ( ${5:${6:0.01} ${7:0} ${8:0}} ) //( sx sy sz ) ( tx ty tz ) S = x, T = y of the texture" }, 
+        { "trigger": "base", "contents": "base" },
+        { "trigger": "lightmap", "contents": "lightmap //Lightmap texture coordinates" },
+        { "trigger": "environment", "contents": "environment //Projects a texture from environment mapping" },
+    ]
+
+}

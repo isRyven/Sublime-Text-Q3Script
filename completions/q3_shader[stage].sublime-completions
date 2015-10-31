@@ -1,0 +1,26 @@
+{
+    "scope": "source.q3shader.stage",
+
+    "completions":
+    [
+        { "trigger": "map\t<texture>", "contents": "map ${1:textures/$2}" },
+        { "trigger": "clampMap\t<texture>", "contents": "clampMap ${1:textures/$2}" },
+        { "trigger": "animMap\t<freq> <texture1> ...", "contents": "animMap ${1:${2:10} ${3:textures/}}" },
+        { "trigger": "videoMap\t<video>", "contents": "videoMap ${1:videos/video_intro.roq}" },
+        { "trigger": "blendFunc\t<func>", "contents": "blendFunc $1" },
+        { "trigger": "rgbGen\t<func>", "contents": "rgbGen $1" },
+        { "trigger": "alphaGen\t<func>", "contents": "alphaGen $1" },
+        { "trigger": "tcGen\t<func>", "contents": "tcGen $1" },
+        { "trigger": "tcMod\t<func>", "contents": "tcMod $1" },
+        { "trigger": "depthFunc\t<func>", "contents": "depthFunc ${1:equal}" },
+        { "trigger": "alphaFunc\t<func>", "contents": "alphaFunc $1" },
+        "\\$lightmap",
+        "\\$whiteimage",
+        "GT0",
+        "LT128",
+        "GE128",
+        "depthWrite",
+        "detail",
+    ]
+
+}

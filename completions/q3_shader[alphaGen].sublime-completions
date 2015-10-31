@@ -1,0 +1,16 @@
+{
+    "scope": "source.q3shader.alphaGen",
+
+    "completions":
+    [
+        { "trigger": "const\t<N.N>", "contents": "const ${1:0.5}" },
+        "lightingSpecular",
+        "wave",
+        "entity",
+        "oneMinusEntity",
+        "vertex",
+        "oneMinusVertex",
+        "portal",
+    ]
+
+}

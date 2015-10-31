@@ -1,0 +1,12 @@
+<snippet>
+    <content><![CDATA[
+${1:script}
+{
+    $2
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>script</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>entity.name.class.etscript</scope>
+</snippet>

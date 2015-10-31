@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Q3 Config</string>
+
+	<key>scopeName</key>
+	<string>source.q3cfg</string>
+
+	<key>uuid</key>
+	<string>22986481CA-15D9-AEDD-000D93C8BE29</string>
+
+	<key>fileTypes</key>
+	<array>
+		<string>cfg</string>
+	</array>
+
+	<key>patterns</key>
+	<array>
+
+		<dict>
+			<key>comment</key>
+			<string>Comment lines</string>
+
+			<key>match</key>
+			<string>//\s*(.+)*$</string>
+
+			<key>name</key>
+			<string>comment.q3cfg</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>String</string>
+
+			<key>begin</key>
+			<string>"</string>
+
+			<key>end</key>
+			<string>"+?</string>
+
+			<key>name</key>
+			<string>string.q3cfg</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Command</string>
+
+			<key>match</key>
+			<string>^\s*(?i)(unbindall|unbind|bind|seta|setu|sets|set|echo|exec|vstr|vid_restart|clear)(\s+[\w.-]+)?(\s+|$)</string>
+
+			<key>name</key>
+			<string>source.q3cfg.bind</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>support.function.any-method.q3cfg</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>source.q3cfg.bind.q3cfg</string>
+				</dict>
+			</dict>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Unsafe</string>
+
+			<key>match</key>
+			<string>\s(?i)unsafe\s</string>
+
+			<key>name</key>
+			<string>constant.numeric.q3cfg</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Number</string>
+			
+			<key>match</key>
+			<string>(?&lt;!\w)(-)*(\d+)*(\.)*(\d+)(?!\w)</string>
+
+			<key>name</key>
+			<string>constant.numeric.q3cfg</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
+			<string>Path</string>
+
+			<key>match</key>
+			<string>[\w\-\.]*((/|\\)[\w\-\.]+)+</string>
+
+			<key>name</key>
+			<string>support.class.q3cfg</string>
+		</dict>
+	</array>
+</dict>
+</plist>

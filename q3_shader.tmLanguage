@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+	<key>name</key>
+	<string>Q3 Shader</string>
+
+	<key>scopeName</key>
+	<string>source.q3shader</string>
+
+	<key>uuid</key>
+	<string>22986481CA-15D9-AEDD-000D93C8BE30</string>
+
+	<key>fileTypes</key>
+	<array>
+		<string>shader</string>
+		<string>arena</string>
+		<string>sounds</string>
+	</array>
+
+	<key>foldingStartMarker</key>
+	<string>\{\s*$</string>
+
+	<key>foldingStopMarker</key>
+	<string>^\s*\}</string>
+
+	<key>patterns</key>
+	<array>
+
+		<dict>
+			<key>include</key>
+			<string>#comment</string>
+		</dict>
+	
+		<dict>
+			<key>include</key>
+			<string>#shader-name</string>
+		</dict>
+
+		<dict>
+			<key>include</key>
+			<string>#shader</string>
+		</dict>
+
+	</array>
+
+	<key>repository</key>
+	<dict>
+		<key>shader</key>
+		<dict>
+			<key>name</key>
+			<string>source.q3shader.block</string>
+
+			<key>begin</key>
+			<string>(\{)</string>
+			
+			<key>end</key>
+			<string>(\})</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>comment</string>
+				</dict>
+			</dict>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#stage</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#dir_variable</string>			
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#dir_q3map</string>			
+				</dict>
+				
+				<dict>
+					<key>include</key>
+					<string>#dir_func</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#dir_surfaceparm</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#dir_deformVertexes</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#directive</string>			
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#basic-types</string>
+				</dict>
+			</array>
+		</dict>
+		
+		<key>shader-name</key>
+		<dict>
+			<key>match</key>
+			<string>^\s*[\w\-/]+</string>
+
+			<key>name</key>
+			<string>entity.name.class.q3shader</string>
+		</dict>
+
+		<key>stage</key>
+		<dict>
+			<key>name</key>
+			<string>source.q3shader.stage</string>
+
+			<key>begin</key>
+			<string>(\{)</string>
+			
+			<key>end</key>
+			<string>(\})</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>comment</string>
+				</dict>
+			</dict>
+
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#dir_variable</string>			
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#dir_blendFunc</string>			
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#dir_rgbGen</string>			
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#dir_alphaGen</string>			
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#dir_tcGen</string>			
+				</dict>
+		
+				<dict>
+					<key>include</key>
+					<string>#dir_tcmod</string>			
+				</dict>
+	
+				<dict>
+					<key>include</key>
+					<string>#dir_alphaFunc</string>			
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#dir_func</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#directive</string>			
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#basic-types</string>
+				</dict>
+			</array>
+		</dict>
+
+		<key>dir_variable</key>
+		<dict>
+			<key>comment</key>
+			<string>lightmap, whiteimage, ...</string>
+
+			<key>match</key>
+			<string>(^|\s+)\$\w+</string>
+
+			<key>name</key>
+			<string>variable.other</string>
+		</dict>
+
+		<key>dir_blendFunc</key>
+		<dict>
+			<key>match</key>
+			<string>(?i)^\s*(blendFunc)((\s+\w+)+)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.bold support.function</string>
+				</dict>
+
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
+			</dict>
+
+			<key>name</key>
+			<string>source.q3shader.blendFunc</string>
+		</dict>
+
+		<key>dir_rgbGen</key>
+		<dict>
+			<key>match</key>
+			<string>(?i)^\s*(rgbGen)(\s+\w+)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.bold support.function</string>
+				</dict>
+
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
+			</dict>
+
+			<key>name</key>
+			<string>source.q3shader.rgbGen</string>
+		</dict>
+
+		<key>dir_alphaGen</key>
+		<dict>
+			<key>match</key>
+			<string>(?i)^\s*(alphaGen)(\s+\w+)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.bold support.function</string>
+				</dict>
+
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
+			</dict>
+
+			<key>name</key>
+			<string>source.q3shader.alphaGen</string>
+		</dict>
+
+		<key>dir_tcGen</key>
+		<dict>
+			<key>match</key>
+			<string>(?i)^\s*(tcGen)(\s+\w+)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.bold support.function</string>
+				</dict>
+
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
+			</dict>
+
+			<key>name</key>
+			<string>source.q3shader.tcGen</string>
+		</dict>
+
+		<key>dir_tcmod</key>
+		<dict>
+			<key>match</key>
+			<string>^\s*(?i)(tcmod)\s+(\w+)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.italic entity.name.function</string>
+				</dict>
+
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control</string>
+				</dict>
+			</dict>
+
+			<key>name</key>
+			<string>source.q3shader.tcMod</string>
+		</dict>
+		
+		<key>dir_alphaFunc</key>
+		<dict>
+			<key>match</key>
+			<string>(?i)^\s*(alphaFunc)(\s+\w+)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.bold support.function</string>
+				</dict>
+
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>constant.language</string>
+				</dict>
+			</dict>
+		</dict>
+
+		<key>dir_func</key>
+		<dict>
+			<key>comment</key>
+			<string>highlight wave, sin ...</string>
+
+			<key>match</key>
+			<string>\s(wave|sin|triangle|square|sawtooth)\s</string>
+
+			<key>name</key>
+			<string>keyword.control</string>
+		</dict>
+
+		<key>directive</key>
+		<dict>
+			<key>match</key>
+			<string>(^|(?&lt;=\{)|(?&lt;=\}))\s*(\w+)</string>
+
+			<key>name</key>
+			<string>entity.name.function</string>
+		</dict>
+
+		<key>dir_q3map</key>
+		<dict>
+			<key>match</key>
+			<string>^\s*(q3map|qer)\w+</string>
+
+			<key>name</key>
+			<string>markup.bold support.function</string>
+		</dict>
+
+		<key>dir_surfaceparm</key>
+		<dict>
+			<key>match</key>
+			<string>^\s*(surfaceparm)\s+([^{]+)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.bold support.function</string>
+				</dict>
+
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control</string>
+				</dict>
+			</dict>
+
+			<key>name</key>
+			<string>source.q3shader.surfaceparm</string>
+		</dict>
+
+		<key>dir_deformVertexes</key>
+		<dict>
+			<key>match</key>
+			<string>(?i)^\s*(deformVertexes)\s+(\w+)</string>
+
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>markup.bold support.function</string>
+				</dict>
+
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control</string>
+				</dict>
+			</dict>
+
+			<key>name</key>
+			<string>source.q3shader.deformVertexes</string>
+		</dict>
+
+		<key>comment</key>
+		<dict>
+			<key>match</key>
+			<string>\/\/\s*.*</string>
+
+			<key>name</key>
+			<string>comment.line.double-slash</string>
+		</dict>
+
+		<key>number</key>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;!\w)(-)*(\d+)*(\.)*(\d+)(?!\w)</string>
+
+			<key>name</key>
+			<string>constant.numeric</string>
+		</dict>
+
+		<key>string</key>
+		<dict>
+			<key>match</key>
+			<string>\"[^"]+\"</string>
+
+			<key>name</key>
+			<string>string.quoted.double</string>
+		</dict>
+
+		<key>path</key>
+		<dict>
+			<key>match</key>
+			<string>[\w\-\.]*((/|\\)[\w\-\.]+)+</string>
+
+			<key>name</key>
+			<string>string.unquoted</string>
+		</dict>
+
+		<key>basic-types</key>
+		<dict>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#comment</string>
+				</dict>				
+
+				<dict>
+					<key>include</key>
+					<string>#number</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#string</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#path</string>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>
