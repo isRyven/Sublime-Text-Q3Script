@@ -41,7 +41,7 @@
         { "trigger": "q3map_sunExt\t <R G B> .. <deviance> <samples>", "contents": "q3map_sunExt ${1:${2:0.5} ${3:0.5} ${4:0.5} ${5:90} ${6:220} ${7:60} ${8:2} ${9:32}}" },
         { "trigger": "q3map_surfaceLight\t<value>", "contents": "q3map_surfaceLight ${1:300}" },
         { "trigger": "q3map_surfaceModel\t<model> ...", "contents": "q3map_surfaceModel ${1:${2:models/grass/grass.obj} ${3:21} ${4:0.25} ${5:8} ${6:24} ${7:0} ${8:360} ${9:1}} //modelpath density odds minscale maxscale minangle maxangle oriented" },
-        { "trigger": "q3map_tcGen\t<func>", "contents": "q3map_tcGen $1" },
+        { "trigger": "q3map_tcGen\t<func>", "contents": "q3map_tcGen ivector ( ${1:256} ${2:0} ${3:0} ) ( ${4:0} ${5:256} ${6:0} )" },
         { "trigger": "q3map_tcMod\t<func>", "contents": "q3map_tcMod $1" },
         { "trigger": "q3map_tessSize\t<value>", "contents": "q3map_tessSize ${1:100}" },
         { "trigger": "q3map_vertexScale\t<N.N>", "contents": "q3map_vertexScale ${1:1.5}" },     
