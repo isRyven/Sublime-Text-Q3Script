@@ -428,7 +428,7 @@
 		<key>comment</key>
 		<dict>
 			<key>match</key>
-			<string>\/\/\s*.*</string>
+			<string>\s*\/\/\s*.*</string>
 
 			<key>name</key>
 			<string>comment.line.double-slash</string>

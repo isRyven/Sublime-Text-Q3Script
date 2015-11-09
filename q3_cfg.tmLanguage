@@ -24,8 +24,8 @@
 			<string>Comment lines</string>
 
 			<key>match</key>
-			<string>//\s*(.+)*$</string>
-
+			<string>\s*\/\/\s*.*</string>
+			
 			<key>name</key>
 			<string>comment.q3cfg</string>
 		</dict>
