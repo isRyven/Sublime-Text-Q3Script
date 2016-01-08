@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Comments</string>
 	<key>scope</key>
-	<string>source.q3script, source.q3shader, source.q3cfg</string>
+	<string>source.etscript, source.q3shader, source.q3cfg</string>
 	<key>settings</key>
 	<dict>
 		<key>shellVariables</key>

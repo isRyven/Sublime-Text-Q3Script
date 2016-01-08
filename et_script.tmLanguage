@@ -235,7 +235,7 @@
 		<key>cmd_accum</key>
 		<dict>
 			<key>match</key>
-			<string>^\s*((?:global)*accum)\s+(\d+)\s+(\w+)</string>
+			<string>^\s*((?:global)*accum)\s+(\d+)\s+(\w+)\s+(\d+)(\s+(\w+)\s+(\w+))*</string>
 			
 			<key>captures</key>
 			<dict>
@@ -256,6 +256,24 @@
 					<key>name</key>
 					<string>keyword.operator</string>
 				</dict>
+
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>constant.numeric</string>
+				</dict>
+
+				<key>6</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.class.etscript</string>
+				</dict>
+
+				<key>7</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.etscript</string>
+				</dict>				
 			</dict>
 		</dict>
 
