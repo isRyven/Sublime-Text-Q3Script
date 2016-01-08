@@ -1,5 +1,5 @@
-# Quake 3 (idtech3) scripts syntax highlighter for Sublime Text
-This bundle brings script(*.script, *.shader) highlighting and autocompletion support for __Quake 3 engine based games__ to your Sublime Text editor.
+# Quake 3, idtech3 scripts syntax highlighter for Sublime Text (2&3)
+This bundle brings __Quake 3__ scripts highlighting support to your Sublime Text editor, it supports *.script(RTCW, ET) and *.shader files. Also added support for autocompletions.
 
 ## Screenshot
 ![Q3 Scripts](https://dl.dropboxusercontent.com/u/6300089/q3-highlight.png)
