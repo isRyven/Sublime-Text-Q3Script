@@ -32,6 +32,20 @@
 
 		<dict>
 			<key>comment</key>
+			<string>comment block</string>
+
+			<key>begin</key>
+			<string>/\*</string>
+			
+			<key>end</key>
+			<string>\*/</string>
+
+			<key>name</key>
+			<string>comment.block</string>
+		</dict>
+
+		<dict>
+			<key>comment</key>
 			<string>String</string>
 
 			<key>begin</key>

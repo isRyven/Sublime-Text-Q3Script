@@ -33,6 +33,11 @@
 
 		<dict>
 			<key>include</key>
+			<string>#commentBlock</string>
+		</dict>		
+
+		<dict>
+			<key>include</key>
 			<string>#routine-name</string>
 		</dict>
 
@@ -79,6 +84,11 @@
 				<dict>
 					<key>include</key>
 					<string>#comment</string>
+				</dict>
+
+				<dict>
+					<key>include</key>
+					<string>#commentBlock</string>
 				</dict>
 			</array>
 		</dict>
@@ -366,6 +376,18 @@
 			<string>comment.line.double-slash</string>
 		</dict>
 
+		<key>commentBlock</key>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			
+			<key>end</key>
+			<string>\*/</string>
+
+			<key>name</key>
+			<string>comment.block</string>
+		</dict>
+
 		<key>number</key>
 		<dict>
 			<key>match</key>
@@ -400,6 +422,11 @@
 				<dict>
 					<key>include</key>
 					<string>#comment</string>
+				</dict>		
+
+				<dict>
+					<key>include</key>
+					<string>#commentBlock</string>
 				</dict>				
 
 				<dict>
