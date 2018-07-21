@@ -2,7 +2,7 @@
 This bundle brings __Quake 3__ scripts highlighting support to your Sublime Text editor, it supports *.script(RTCW, ET) and *.shader files. Also added support for autocompletions.
 
 ## Screenshot
-![Q3 Scripts](https://dl.dropboxusercontent.com/u/6300089/q3-highlight.png)
+![Q3 Scripts](../master/assets/q3-highlight.png)
 
 ## Easy installation
 You can install this package through the [Package Control](https://packagecontrol.io/installation). Search for *"Quake3 Script"*, install.
